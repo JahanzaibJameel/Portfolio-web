@@ -78,32 +78,22 @@ const formMessage = document.getElementById('formMessage');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
     formMessage.textContent = 'Sending your message...';
     formMessage.classList.remove('error');
     formMessage.classList.add('success');
-
-    fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-    })
-        .then(response => {
-            if (response.ok) {
-                formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                contactForm.reset();
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        })
-        .catch(error => {
-            formMessage.textContent = 'There was a problem sending your message. Please try again later or email me directly.';
+    
+    emailjs.sendForm('service_hs30cnb', 'template_qk1544j', e.target)
+        .then(() => {
+            formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+            contactForm.reset();
+        }, (error) => {
+            formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
             formMessage.classList.remove('success');
             formMessage.classList.add('error');
-            console.error('Error:', error);
+            console.error('EmailJS Error:', error);
         });
 });
-
-
 const testimonialSwiper = new Swiper('.testimonials-slider', {
     loop: true,
     autoplay: {
