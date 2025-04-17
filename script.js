@@ -1,20 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 const themeIcon = themeToggle.querySelector('i');
@@ -96,24 +79,30 @@ const formMessage = document.getElementById('formMessage');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-
-    console.log({ name, email, subject, message });
-
-    formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+    formMessage.textContent = 'Sending your message...';
     formMessage.classList.remove('error');
     formMessage.classList.add('success');
 
-    contactForm.reset();
-
-    setTimeout(() => {
-        formMessage.classList.remove('success');
-        formMessage.textContent = '';
-    }, 5000);
+    fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+    })
+        .then(response => {
+            if (response.ok) {
+                formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+                contactForm.reset();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .catch(error => {
+            formMessage.textContent = 'There was a problem sending your message. Please try again later or email me directly.';
+            formMessage.classList.remove('success');
+            formMessage.classList.add('error');
+            console.error('Error:', error);
+        });
 });
+
 
 const testimonialSwiper = new Swiper('.testimonials-slider', {
     loop: true,
