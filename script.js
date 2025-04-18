@@ -72,27 +72,36 @@ scrollTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
-
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-
-contactForm.addEventListener('submit', (e) => {
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    formMessage.textContent = 'Sending your message...';
-    formMessage.classList.remove('error');
-    formMessage.classList.add('success');
-    
-    emailjs.sendForm('service_hs30cnb', 'template_qk1544j', e.target)
-        .then(() => {
-            formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-            contactForm.reset();
-        }, (error) => {
-            formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
-            formMessage.classList.remove('success');
-            formMessage.classList.add('error');
-            console.error('EmailJS Error:', error);
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
         });
+
+        if (response.ok) {
+            alert('Message sent successfully!');
+            form.reset();
+        } else {
+            throw new Error('Failed to send');
+        }
+    } catch (error) {
+        alert('Error sending message. Please try again later.');
+    } finally {
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+    }
 });
 const testimonialSwiper = new Swiper('.testimonials-slider', {
     loop: true,
