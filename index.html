@@ -6,13 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Jahanzaib | Senior Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
+
     <head>
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script>
-            (function() {
-                emailjs.init("public_K5we7_O586S9BLgFn"); // Initialize with your EmailJS user ID
-            })();
-        </script>
     </head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
@@ -553,6 +548,7 @@
         </div>
     </section>
 
+    <!-- Replace your existing contact form section with this updated version -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="text-center">
@@ -601,35 +597,33 @@
                             <a href="https://github.com/JahanzaibJameel" target="_blank">github.com/JahanzaibJameel</a>
                         </div>
                     </div>
-                </div>     <div class="contact-form">
-                    <form id="contactForm">
+                </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xeoabrww" method="POST" id="contactForm">
+                        <input type="hidden" name="_subject" value="New message from portfolio!">
+                        <input type="text" name="_gotcha" style="display:none">
+
                         <div class="form-group">
                             <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" name="from_name" class="form-control" placeholder="Enter your name" required>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
+
                         <div class="form-group">
                             <label for="email" class="form-label">Your Email</label>
-                            <input type="email" id="email" name="from_email" class="form-control" placeholder="Enter your email" required>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter subject">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Enter your message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            Send Message <i class="fas fa-paper-plane"></i>
-                        </button>
-                        <div id="formMessage" class="form-message"></div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    
-
 
     <footer>
         <div class="container">
