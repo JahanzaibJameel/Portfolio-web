@@ -1,0 +1,7 @@
+/**
+ * @reference "tailwindcss"
+ */
+
+@theme {
+  --tw-gradient-stops: theme(gradientStrips);
+}
