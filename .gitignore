@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+build/
+
+# TypeScript / Next.js generated
+next-env.d.ts
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env*.local
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Kilo Code agent worktrees
+.kilo/worktrees/
+
+# Kilo Agent Manager state
+.kilo/agent-manager.json
+
+# Kilo Code legacy agent worktrees
+.kilocode/worktrees/
+
+# Kilo Agent Manager legacy state
+.kilocode/agent-manager.json
