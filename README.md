@@ -28,7 +28,7 @@ testimonials, and open-source contributions. Designed with motion-first interact
 accessibility, and performance at its core, it ships as a fully static, SEO-optimized
 Next.js application.
 
-> Live demo: **https://
+> Live demo: **https
 
 ---
 
