@@ -38,15 +38,15 @@ export default function Contact() {
             >
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-gray-400" />
-                <span>m.jahanzaibjameel@gmail.com</span>
+                <span>[NEED USER INPUT]</span>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-gray-400" />
-                <span>Available for remote work</span>
+                <span>[NEED USER INPUT]</span>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-gray-400" />
-                <span>Remote</span>
+                <span>Hyderabad, Sindh, Pakistan</span>
               </div>
             </motion.div>
 

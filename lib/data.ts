@@ -2,61 +2,56 @@ export const navItems = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
-  { id: 'testimonials', label: 'Testimonials' },
-  { id: 'open-source', label: 'Open Source' },
-  { id: 'achievements', label: 'Achievements' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'education', label: 'Education' },
   { id: 'contact', label: 'Contact' },
 ];
 
 export const SITE_CONFIG = {
   name: 'Muhammad Jahanzaib',
-  title: 'Muhammad Jahanzaib | Senior Frontend Engineer',
+  title: 'Muhammad Jahanzaib — Frontend Engineer',
   description:
-    'Senior frontend engineer building exceptional digital products with React, Next.js, and TypeScript. I craft high-performance experiences that scale.',
-  url: 'https://jahanzaib.dev',
-  email: 'm.jahanzaibjameel@gmail.com',
-  location: 'Remote',
+    'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
+  url: 'https://muhammadjahanzaib.dev',
+  email: '[NEED USER INPUT]',
+  location: 'Hyderabad, Sindh, Pakistan',
 };
 
 export const PERSONAL_INFO = {
   name: 'Muhammad Jahanzaib',
-  title: 'Senior Frontend Engineer',
-  tagline: 'I build digital products that scale.',
-  email: 'm.jahanzaibjameel@gmail.com',
-  location: 'Remote',
+  title: 'Frontend Engineer',
+  tagline: 'I build fast, scalable, and maintainable interfaces for web and mobile.',
+  email: '[NEED USER INPUT]',
+  location: 'Hyderabad, Sindh, Pakistan',
 };
 
 export const heroData = {
-  headline: 'I build digital products.',
+  headline: 'I build fast, scalable, and maintainable interfaces.',
   subheading:
-    'Senior frontend engineer specializing in React, Next.js, and React Native. I craft high-performance experiences with a focus on scalability, accessibility, and elegant architecture.',
+    'Frontend Engineer specializing in React, Next.js, and React Native. I craft performant experiences with a focus on scalability, accessibility, and clean architecture.',
   metrics: [
-    { value: '100K+', label: 'Users served' },
-    { value: '99', label: 'Lighthouse score' },
-    { value: '2.5s', label: 'LCP' },
-    { value: '0', label: 'Console errors' },
+    { value: '[NEED USER INPUT]', label: 'Projects completed' },
+    { value: '[NEED USER INPUT]', label: 'Users reached' },
+    { value: '[NEED USER INPUT]', label: 'Lighthouse score' },
+    { value: '[NEED USER INPUT]', label: 'Bundle size' },
   ],
 };
 
 export const aboutData = {
   mission:
-    'I build systems that scale gracefully. My approach combines deep technical expertise with a designer\'s eye for detail, ensuring every pixel serves a purpose.',
+    "I build fast, scalable, and maintainable web and mobile interfaces. My approach combines modern frontend expertise with a designer's eye for detail, ensuring every pixel serves a purpose.",
   story:
-    'With over 5 years of experience, I\'ve helped startups and enterprises ship high-leverage products. My expertise spans: React, Next.js, React Native, TypeScript, Node.js, and modern CSS solutions.',
+    "I'm a Frontend Engineer with production experience in React, Next.js, and React Native. I enjoy building real products, reusable UI systems, API integrations, and modern development workflows. I'm currently continuing my academic journey while building production-oriented applications.",
   timeline: [
-    { year: '2021', event: 'Started my development career' },
-    { year: '2022', event: 'Built and shipped a React Native app with 500K+ downloads' },
-    { year: '2023', event: 'Led migration to Next.js App Router, reducing bundle size by 40%' },
-    { year: '2024', event: 'Open-sourced a design system used by 20+ teams' },
-    { year: '2025', event: 'Published technical articles reaching 100K+ developers' },
+    { year: '2024', event: 'Started as Frontend Engineer at Apprex Systems' },
+    { year: '2025', event: 'Continuing to build production-focused applications' },
   ],
   stats: {
-    projects: 15,
-    users: '100K+',
-    years: 5,
-    awards: 3,
+    projects: '[NEED USER INPUT]',
+    users: '[NEED USER INPUT]',
+    years: 1,
+    awards: 0,
   },
 };
 
@@ -64,253 +59,189 @@ export const skills = [
   {
     category: 'Frontend',
     items: [
-      { name: 'React', level: 95 },
-      { name: 'Next.js', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Tailwind CSS', level: 95 },
-      { name: 'Framer Motion', level: 90 },
+      { name: 'React', level: 85 },
+      { name: 'Next.js', level: 85 },
+      { name: 'TypeScript', level: 80 },
+      { name: 'JavaScript', level: 85 },
+      { name: 'Tailwind CSS', level: 80 },
     ],
   },
   {
     category: 'Mobile',
     items: [
-      { name: 'React Native', level: 85 },
-      { name: 'Expo', level: 80 },
-      { name: 'Redux Toolkit', level: 85 },
-      { name: 'Zustand', level: 90 },
+      { name: 'React Native', level: 80 },
+      { name: 'Expo', level: 75 },
+      { name: 'Zustand', level: 70 },
+    ],
+  },
+  {
+    category: 'State Management',
+    items: [
+      { name: 'Zustand', level: 70 },
+      { name: 'TanStack Query', level: 65 },
     ],
   },
   {
     category: 'Tools',
     items: [
-      { name: 'Git', level: 95 },
-      { name: 'Vercel', level: 90 },
-      { name: 'AWS', level: 80 },
-      { name: 'Docker', level: 85 },
-      { name: 'Figma', level: 85 },
+      { name: 'Git', level: 80 },
+      { name: 'GitHub', level: 80 },
+      { name: 'VS Code', level: 90 },
+      { name: 'Figma', level: 75 },
+    ],
+  },
+  {
+    category: 'Architecture',
+    items: [
+      { name: 'Component Architecture', level: 80 },
+      { name: 'API Integration', level: 80 },
     ],
   },
 ];
 
 export const projects = [
   {
-    title: 'Design System Framework',
-    slug: 'design-system-framework',
+    title: 'Frontend Nexus',
+    slug: 'frontend-nexus',
     description:
-      'A comprehensive design system powering multiple products at scale.',
+      'A comprehensive frontend development reference and playground covering modern browser APIs, frontend concepts, reusable examples, and practical web development patterns.',
     longDescription:
-      'Built a production-grade design system used across 20+ internal products. Implemented token management, automated documentation, and cross-platform consistency. Reduced design-to-development handoff time by 60%.',
+      'A comprehensive frontend development reference covering modern browser APIs, frontend concepts, reusable examples, and practical web development patterns.',
     image: '/project-1.png',
-    demo: 'https://designsystem.example.com',
-    repo: 'https://github.com/JahanzaibJameel/design-system',
-    tech: ['React', 'Storybook', 'Figma API', 'TypeScript', 'Tailwind'],
+    demo: 'https://jahanzaibjameel.github.io/frontend-nexus',
+    repo: 'https://github.com/JahanzaibJameel/frontend-nexus',
+    tech: ['HTML', 'CSS', 'JavaScript', 'PWA', 'Browser APIs'],
     metrics: [
-      { value: '60%', label: 'Faster handoff' },
-      { value: '20+', label: 'Products using' },
-      { value: '0.5s', label: 'Component load' },
+      { value: '48', label: 'Libraries/Areas' },
+      { value: '28', label: 'Pages' },
+      { value: '27', label: 'Browser APIs' },
     ],
-    period: 'Q1 2024 - Q3 2024',
-    role: 'Lead Frontend Engineer',
+    period: '2024 - Present',
+    role: 'Frontend Engineer',
   },
   {
-    title: 'AI-Powered Analytics Dashboard',
-    slug: 'ai-analytics-dashboard',
+    title: 'CryptoVault Pro',
+    slug: 'cryptovault-pro',
     description:
-      'A real-time analytics platform with predictive insights.',
+      'A production-oriented cryptocurrency application focused on modern Angular architecture, strict TypeScript development, reactive state, offline capabilities, and comprehensive automated testing.',
     longDescription:
-      'Developed a full-stack analytics solution with real-time data processing, AI-powered predictions, and interactive visualizations. Achieved 99 Lighthouse score and sub-2s LCP.',
+      'A cryptocurrency application built with Angular 21, TypeScript 5.9, Signals, RxJS, and SCSS. Features offline-first capabilities, PWA support, IndexedDB storage, and comprehensive automated testing.',
     image: '/project-2.png',
-    demo: 'https://analytics.example.com',
-    repo: 'https://github.com/JahanzaibJameel/analytics-dashboard',
-    tech: ['Next.js', 'React', 'D3.js', 'Python', 'PostgreSQL', 'Redis'],
+    demo: '[NEED USER INPUT]',
+    repo: '[NEED USER INPUT]',
+    tech: ['Angular 21', 'TypeScript 5.9', 'RxJS', 'SCSS', 'PWA', 'IndexedDB'],
     metrics: [
-      { value: '99', label: 'Lighthouse score' },
-      { value: '2.1s', label: 'Avg LCP' },
-      { value: '10M+', label: 'Events/day' },
+      { value: '~220', label: 'Tests' },
+      { value: '[NEED USER INPUT]', label: 'Users' },
     ],
-    period: 'Q2 2024 - Q4 2024',
-    role: 'Frontend Architect',
+    period: '2024 - Present',
+    role: 'Frontend Engineer',
   },
   {
-    title: 'Mobile-First E-commerce App',
-    slug: 'ecommerce-react-native',
+    title: 'Lumora Photo Gallery App',
+    slug: 'lumora-photo-gallery',
     description:
-      'A cross-platform e-commerce application with offline-first capabilities.',
+      'A cross-platform mobile photo gallery application built with React Native and Expo, focusing on reusable UI, navigation, local persistence, and performance.',
     longDescription:
-      'Built a React Native e-commerce app with 500K+ downloads. Implemented offline-first architecture, push notifications, and native-like performance.',
+      'A React Native photo gallery app using Expo, TypeScript, MMKV for local storage, FlashList for performance, and React Navigation for routing. Features approximately 10 screens.',
     image: '/project-3.png',
-    demo: 'https://apps.apple.com/app/id123456789',
-    repo: 'https://github.com/JahanzaibJameel/ecommerce-app',
-    tech: ['React Native', 'Expo', 'Redux', 'GraphQL', 'Firebase'],
+    demo: '[NEED USER INPUT]',
+    repo: '[NEED USER INPUT]',
+    tech: ['React Native', 'Expo SDK 54', 'TypeScript', 'MMKV', 'FlashList'],
     metrics: [
-      { value: '500K+', label: 'Downloads' },
-      { value: '4.9', label: 'Rating' },
-      { value: '60fps', label: 'Framerate' },
+      { value: '10', label: 'Screens' },
+      { value: 'Expo SDK 54', label: 'Version' },
     ],
-    period: 'Q3 2023 - Q2 2024',
-    role: 'React Native Developer',
+    period: '2024 - Present',
+    role: 'Frontend Engineer',
+  },
+  {
+    title: 'Messaging Application',
+    slug: 'messaging-app',
+    description:
+      'A React Native messaging application focused on scalable frontend architecture, state management, local persistence, and production-oriented engineering practices.',
+    longDescription:
+      'A messaging app built with React Native, Expo, TypeScript, Zustand for state management, MMKV for local storage, and Jest for testing. Features Clean Architecture concepts.',
+    image: '/project-4.png',
+    demo: '[NEED USER INPUT]',
+    repo: 'https://github.com/JahanzaibJameel/Messaging-Application',
+    tech: ['React Native', 'Expo', 'TypeScript', 'Zustand', 'MMKV', 'Jest'],
+    metrics: [
+      { value: '[NEED USER INPUT]', label: 'Features' },
+    ],
+    period: '2024 - Present',
+    role: 'Frontend Engineer',
+  },
+  {
+    title: 'Disaster Alert / SOS',
+    slug: 'disaster-alert',
+    description:
+      'A disaster alert and emergency information web application focused on presenting location-aware alerts and emergency information through a modern web interface.',
+    longDescription:
+      'A Next.js application using TypeScript, Tailwind CSS, and MapLibre for location-aware disaster alerts and emergency information display.',
+    image: '/project-5.png',
+    demo: '[NEED USER INPUT]',
+    repo: '[NEED USER INPUT]',
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MapLibre', 'API Integration'],
+    metrics: [],
+    period: 'In Progress',
+    role: 'Frontend Engineer',
   },
 ];
 
 export const experience = [
   {
     company: 'Apprex Systems',
-    role: 'Senior Frontend Engineer',
-    period: '2024 - Present',
-    location: 'Remote',
-    description:
-      'Lead frontend engineering for enterprise-scale applications. Architecture design, team mentoring, and performance optimization.',
-    achievements: [
-      'Reduced bundle size by 40% through code splitting and tree-shaking',
-      'Improved Core Web Vitals scores across all products',
-      'Built reusable component library with 100+ components',
-      'Mentored 5 junior developers to senior roles',
-    ],
-    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'GraphQL'],
-  },
-  {
-    company: 'TechStart Inc.',
     role: 'Frontend Engineer',
+    period: 'January 2024 – Present',
+    location: 'Hyderabad, Pakistan / Remote',
+    description:
+      'Building frontend interfaces for web and mobile products. Working with React and Next.js, React Native, TypeScript, JavaScript, building reusable UI components, and integrating REST APIs.',
+    achievements: [
+      'Building and maintaining production-oriented applications',
+      'Developing reusable UI components',
+      'Implementing responsive and performant interfaces',
+      'Working with modern development tooling and AI-assisted workflows',
+    ],
+    tech: ['React', 'Next.js', 'React Native', 'TypeScript', 'REST APIs', 'Zustand', 'TanStack Query'],
+  },
+];
+
+export const education = [
+  {
+    institution: 'Eagle House Higher Secondary School',
+    degree: 'Class 12 (Science / Pre-Engineering)',
     period: '2022 - 2024',
-    location: 'San Francisco, CA',
-    description:
-      'Built customer-facing products with a focus on performance and user experience.',
-    achievements: [
-      'Launched e-commerce platform serving 1M+ users',
-      'Reduced page load time by 50%',
-      'Implemented automated testing with 90% coverage',
-    ],
-    tech: ['React', 'Next.js', 'TypeScript', 'Jest', 'Cypress'],
-  },
-  {
-    company: 'StartupXYZ',
-    role: 'Junior Frontend Developer',
-    period: '2021 - 2022',
-    location: 'Austin, TX',
-    description:
-      'Started my development career building modern web applications with React and Next.js.',
-    achievements: [
-      'Built MVP that acquired first 10K users',
-      'Created design system adopted company-wide',
-      'Contributed to open-source projects',
-    ],
-    tech: ['React', 'Next.js', 'CSS-in-JS', 'Firebase'],
+    location: 'Hyderabad, Sindh, Pakistan',
   },
 ];
 
-export const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    role: 'CTO, TechStart Inc.',
-    quote:
-      'Muhammad led our frontend rewrite using Next.js and TypeScript. The result was a 60% reduction in bundle size and flawless performance.',
-    avatar: '/testimonial-1.png',
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Product Lead, Apprex Systems',
-    quote:
-      'Working with Muhammad transformed our product delivery. He takes complex problems and makes them elegantly simple.',
-    avatar: '/testimonial-2.png',
-  },
-  {
-    name: 'Emily Rodriguez',
-    role: 'Engineering Manager, DigitalFlow',
-    quote:
-      'Muhammad built our React Native app that now serves 500K+ users. His attention to detail is exceptional.',
-    avatar: '/testimonial-3.png',
-  },
-  {
-    name: 'David Kim',
-    role: 'Founder, StartupXYZ',
-    quote:
-      'Muhammad joined as a junior and grew into one of our most valuable engineers. He taught our team better patterns.',
-    avatar: '/testimonial-4.png',
-  },
-];
+type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+  avatar: string;
+};
 
-export const achievements = [
-  {
-    year: 2024,
-    title: 'Featured Contributor',
-    organization: 'Next.js Community',
-    description: 'Contributed official examples and documentation improvements',
-  },
-  {
-    year: 2023,
-    title: 'Open Source Award',
-    organization: 'GitHub Stars',
-    description: 'Design system reached 1K stars',
-  },
-  {
-    year: 2022,
-    title: 'Best Hackathon Project',
-    organization: 'TechCrunch Disrupt',
-    description: 'AI-Powered Productivity Tool',
-  },
-];
+type Achievement = {
+  year: number;
+  title: string;
+  organization: string;
+  description: string;
+};
 
-export const openSource = [
-  {
-    name: 'Design System',
-    description: 'A comprehensive design system for React applications',
-    url: 'https://github.com/JahanzaibJameel/design-system',
-    stars: 1240,
-    language: 'TypeScript',
-  },
-  {
-    name: 'React Components',
-    description: 'A collection of accessible UI components',
-    url: 'https://github.com/JahanzaibJameel/react-components',
-    stars: 850,
-    language: 'JavaScript',
-  },
-  {
-    name: 'Portfolio Starter',
-    description: 'A modern portfolio starter in Next.js',
-    url: 'https://github.com/JahanzaibJameel/portfolio-starter',
-    stars: 520,
-    language: 'TypeScript',
-  },
-];
+type OpenSourceProject = {
+  name: string;
+  description: string;
+  url: string;
+  stars: number;
+  language: string;
+};
 
-export const calendarData = [
-  { year: 2021, week: 36, count: 5 },
-  { year: 2021, week: 37, count: 8 },
-  { year: 2021, week: 38, count: 12 },
-  { year: 2021, week: 39, count: 15 },
-  { year: 2021, week: 40, count: 10 },
-  { year: 2021, week: 41, count: 7 },
-  { year: 2021, week: 42, count: 3 },
-  { year: 2021, week: 43, count: 2 },
-  { year: 2021, week: 44, count: 1 },
-  { year: 2021, week: 45, count: 8 },
-  { year: 2021, week: 46, count: 14 },
-  { year: 2021, week: 47, count: 18 },
-  { year: 2021, week: 48, count: 22 },
-  { year: 2021, week: 49, count: 16 },
-  { year: 2021, week: 50, count: 12 },
-  { year: 2021, week: 51, count: 9 },
-  { year: 2021, week: 52, count: 6 },
-  { year: 2022, week: 1, count: 4 },
-  { year: 2022, week: 2, count: 5 },
-  { year: 2022, week: 3, count: 7 },
-  { year: 2022, week: 4, count: 11 },
-  { year: 2022, week: 5, count: 13 },
-  { year: 2022, week: 6, count: 15 },
-  { year: 2022, week: 7, count: 18 },
-  { year: 2022, week: 8, count: 22 },
-  { year: 2022, week: 9, count: 25 },
-  { year: 2022, week: 10, count: 28 },
-  { year: 2022, week: 11, count: 31 },
-  { year: 2022, week: 12, count: 35 },
-  { year: 2022, week: 13, count: 38 },
-  { year: 2022, week: 14, count: 42 },
-  { year: 2022, week: 15, count: 45 },
-  { year: 2022, week: 16, count: 48 },
-  { year: 2022, week: 17, count: 52 },
-  { year: 2022, week: 18, count: 55 },
-  { year: 2022, week: 19, count: 58 },
-  { year: 2022, week: 20, count: 62 },
-  { year: 2022, week: 21, count: 65 },
-];
+export const testimonials: Testimonial[] = [];
+
+export const achievements: Achievement[] = [];
+
+export const openSource: OpenSourceProject[] = [];
+
+export const calendarData: any[] = [];

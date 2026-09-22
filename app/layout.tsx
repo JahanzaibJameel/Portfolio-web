@@ -20,10 +20,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'Muhammad Jahanzaib | Senior Frontend Engineer',
+  title: 'Muhammad Jahanzaib — Frontend Engineer',
   description:
-    'Senior frontend engineer building exceptional digital products with React, Next.js, and TypeScript. I craft high-performance experiences that scale.',
-  keywords: ['frontend', 'engineer', 'react', 'next.js', 'typescript', 'portfolio'],
+    'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
+  keywords: ['frontend', 'engineer', 'react', 'next.js', 'react-native', 'typescript', 'portfolio'],
   authors: [{ name: 'Muhammad Jahanzaib' }],
   creator: 'Muhammad Jahanzaib',
   publisher: 'Muhammad Jahanzaib',
@@ -33,15 +33,15 @@ export const metadata = {
     address: false,
     images: false,
   },
-  metadataBase: new URL('https://jahanzaib.dev'),
+  metadataBase: new URL('https://muhammadjahanzaib.dev'),
   alternates: {
-    canonical: 'https://jahanzaib.dev',
+    canonical: 'https://muhammadjahanzaib.dev',
   },
   openGraph: {
-    title: 'Muhammad Jahanzaib | Senior Frontend Engineer',
+    title: 'Muhammad Jahanzaib — Frontend Engineer',
     description:
-      'Building exceptional digital products with React, Next.js, and TypeScript.',
-    url: 'https://jahanzaib.dev',
+      'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
+    url: 'https://muhammadjahanzaib.dev',
     siteName: 'Muhammad Jahanzaib Portfolio',
     images: [
       {
@@ -56,11 +56,11 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Muhammad Jahanzaib | Senior Frontend Engineer',
+    title: 'Muhammad Jahanzaib — Frontend Engineer',
     description:
-      'Building exceptional digital products with React, Next.js, and TypeScript.',
-    creators: ['@jahanzaib_dev'],
-    creator: '@jahanzaib_dev',
+      'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
+    creators: ['@JahanzaibJameel'],
+    creator: '@JahanzaibJameel',
   },
   robots: {
     index: true,

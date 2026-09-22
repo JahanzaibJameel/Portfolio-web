@@ -26,7 +26,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          Senior Frontend Engineer crafting exceptional digital products with React, Next.js, and TypeScript.
+          Frontend Engineer building fast, scalable, and maintainable interfaces for web and mobile with React, Next.js, and React Native.
         </motion.p>
         <motion.div
           className="flex gap-4 justify-center"
