@@ -38,11 +38,13 @@ export default function Contact() {
             >
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-gray-400" />
-                <span>[NEED USER INPUT]</span>
+                <a href="mailto:m.jahanzaibjameel@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                  m.jahanzaibjameel@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-gray-400" />
-                <span>[NEED USER INPUT]</span>
+                <span>+92 308 3954920</span>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-gray-400" />
