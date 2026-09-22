@@ -43,7 +43,8 @@ export default function Footer() {
                 <MapPin size={16} />
                 Hyderabad, Sindh, Pakistan
               </p>
-              <p>[NEED USER INPUT]</p>
+              <p>[m.jahanzaibjameel@gmail.com
+]</p>
             </div>
           </div>
         </div>
