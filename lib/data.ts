@@ -101,8 +101,8 @@ export const projects = [
     longDescription:
       'A comprehensive frontend development reference covering modern browser APIs, frontend concepts, reusable examples, and practical web development patterns.',
     image: '/project-1.png',
-    demo: 'https://jahanzaibjameel.github.io/frontend-nexus',
-    repo: 'https://github.com/JahanzaibJameel/frontend-nexus',
+    demo: 'https://frontend-nexus-omega.vercel.app/',
+    repo: 'https://github.com/JahanzaibJameel/Frontend-Nexus',
     tech: ['HTML', 'CSS', 'JavaScript', 'PWA', 'Browser APIs'],
     metrics: [
       { value: '47', label: 'Libraries/Areas' },
@@ -120,8 +120,8 @@ export const projects = [
     longDescription:
       'A cryptocurrency application built with Angular 21, TypeScript 5.9, Signals, RxJS, and SCSS. Features offline-first capabilities, PWA support, IndexedDB storage, and comprehensive automated testing.',
     image: '/project-2.png',
-    demo: '[NEED USER INPUT]',
-    repo: '[NEED USER INPUT]',
+    demo: 'https://cryptovault-pro12.netlify.app/',
+    repo: 'https://github.com/JahanzaibJameel/CryptoVault-Pro',
     tech: ['Angular 21', 'TypeScript 5.9', 'RxJS', 'SCSS', 'PWA', 'IndexedDB'],
     metrics: [
       { value: '~220', label: 'Tests' },
@@ -138,11 +138,10 @@ export const projects = [
     longDescription:
       'A React Native photo gallery app using Expo, TypeScript, MMKV for local storage, FlashList for performance, and React Navigation for routing. Features approximately 10 screens.',
     image: '/project-3.png',
-    demo: '[NEED USER INPUT]',
-    repo: '[NEED USER INPUT]',
+    demo: 'https://lumora-photogallery-app.netlify.app/',
+    repo: 'https://github.com/JahanzaibJameel/Lumora-photogallery-App',
     tech: ['React Native', 'Expo SDK 54', 'TypeScript', 'MMKV', 'FlashList'],
     metrics: [
-      { value: '10', label: 'Screens' },
       { value: 'Expo SDK 54', label: 'Version' },
     ],
     period: '2026 - Present',
@@ -156,12 +155,10 @@ export const projects = [
     longDescription:
       'A messaging app built with React Native, Expo, TypeScript, Zustand for state management, MMKV for local storage, and Jest for testing. Features Clean Architecture concepts.',
     image: '/project-4.png',
-    demo: '[NEED USER INPUT]',
+    demo: 'https://messaging-application1.netlify.app/',
     repo: 'https://github.com/JahanzaibJameel/Messaging-Application',
     tech: ['React Native', 'Expo', 'TypeScript', 'Zustand', 'MMKV', 'Jest'],
-    metrics: [
-      { value: '[NEED USER INPUT]', label: 'Features' },
-    ],
+  
     period: '2026 - Present',
     role: 'Frontend Engineer',
   },
@@ -204,7 +201,7 @@ export const education = [
   {
     institution: 'Eagle House Higher Secondary School',
     degree: 'Class 12 (Science / Pre-Engineering)',
-    period: '2022 - 2024',
+    period: '2024 - present',
     location: 'Hyderabad, Sindh, Pakistan',
   },
 ];
