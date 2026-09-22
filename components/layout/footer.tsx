@@ -43,8 +43,9 @@ export default function Footer() {
                 <MapPin size={16} />
                 Hyderabad, Sindh, Pakistan
               </p>
-              <p>[m.jahanzaibjameel@gmail.com
-]</p>
+              <p><a href="mailto:m.jahanzaibjameel@gmail.com" className="hover:text-white transition-colors">
+                m.jahanzaibjameel@gmail.com
+              </a></p>
             </div>
           </div>
         </div>
