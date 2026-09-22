@@ -41,7 +41,7 @@ export default function Hero() {
             Contact Me
           </a>
           <a
-            href="/cv.pdf"
+            href="/Muhammad-Jahanzaib-Resume.pdf"
             download
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 font-medium text-white transition-all hover:bg-white/10"
           >
