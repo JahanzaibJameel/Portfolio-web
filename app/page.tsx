@@ -3,11 +3,9 @@
 import Hero from '@/components/sections/hero';
 import About from '@/components/sections/about';
 import Skills from '@/components/sections/skills';
-import Projects from '@/components/sections/projects';
 import Experience from '@/components/sections/experience';
-import Testimonials from '@/components/sections/testimonials';
-import OpenSource from '@/components/sections/open-source';
-import Achievements from '@/components/sections/achievements';
+import Projects from '@/components/sections/projects';
+import Education from '@/components/sections/education';
 import Contact from '@/components/sections/contact';
 import Footer from '@/components/layout/footer';
 import SmoothScroll from '@/components/layout/smooth-scroll';
@@ -28,11 +26,9 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
         <Experience />
-        <Testimonials />
-        <OpenSource />
-        <Achievements />
+        <Projects />
+        <Education />
         <Contact />
         <Footer />
       </SmoothScroll>
