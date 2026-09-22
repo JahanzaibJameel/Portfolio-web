@@ -13,8 +13,8 @@ export const SITE_CONFIG = {
   title: 'Muhammad Jahanzaib — Frontend Engineer',
   description:
     'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
-  url: 'https://muhammadjahanzaib.dev',
-  email: '[NEED USER INPUT]',
+  url: 'https://muhammadjahanzaibdev.netlify.app/',
+  email: 'm.jahanzaibjameel@gmail.com',
   location: 'Hyderabad, Sindh, Pakistan',
 };
 
@@ -22,7 +22,7 @@ export const PERSONAL_INFO = {
   name: 'Muhammad Jahanzaib',
   title: 'Frontend Engineer',
   tagline: 'I build fast, scalable, and maintainable interfaces for web and mobile.',
-  email: '[NEED USER INPUT]',
+  email: 'm.jahanzaibjameel@gmail.com',
   location: 'Hyderabad, Sindh, Pakistan',
 };
 
@@ -30,12 +30,7 @@ export const heroData = {
   headline: 'I build fast, scalable, and maintainable interfaces.',
   subheading:
     'Frontend Engineer specializing in React, Next.js, and React Native. I craft performant experiences with a focus on scalability, accessibility, and clean architecture.',
-  metrics: [
-    { value: '[NEED USER INPUT]', label: 'Projects completed' },
-    { value: '[NEED USER INPUT]', label: 'Users reached' },
-    { value: '[NEED USER INPUT]', label: 'Lighthouse score' },
-    { value: '[NEED USER INPUT]', label: 'Bundle size' },
-  ],
+ 
 };
 
 export const aboutData = {
@@ -48,10 +43,8 @@ export const aboutData = {
     { year: '2025', event: 'Continuing to build production-focused applications' },
   ],
   stats: {
-    projects: '[NEED USER INPUT]',
-    users: '[NEED USER INPUT]',
-    years: 1,
-    awards: 0,
+    projects: '15+',   
+    years: '2+',
   },
 };
 
@@ -59,42 +52,42 @@ export const skills = [
   {
     category: 'Frontend',
     items: [
-      { name: 'React', level: 85 },
-      { name: 'Next.js', level: 85 },
-      { name: 'TypeScript', level: 80 },
-      { name: 'JavaScript', level: 85 },
-      { name: 'Tailwind CSS', level: 80 },
+      { name: 'React', level: 95 },
+      { name: 'Next.js', level: 95 },
+      { name: 'TypeScript', level: 90 },
+      { name: 'JavaScript', level: 95 },
+      { name: 'Tailwind CSS', level: 95 },
     ],
   },
   {
     category: 'Mobile',
     items: [
-      { name: 'React Native', level: 80 },
-      { name: 'Expo', level: 75 },
-      { name: 'Zustand', level: 70 },
+      { name: 'React Native', level: 90 },
+      { name: 'Expo', level: 95 },
+      { name: 'React Native CLI', level: 85 },
     ],
   },
   {
     category: 'State Management',
     items: [
-      { name: 'Zustand', level: 70 },
-      { name: 'TanStack Query', level: 65 },
+      { name: 'Zustand', level: 80 },
+      { name: 'TanStack Query', level: 85 },
     ],
   },
   {
     category: 'Tools',
     items: [
-      { name: 'Git', level: 80 },
-      { name: 'GitHub', level: 80 },
-      { name: 'VS Code', level: 90 },
-      { name: 'Figma', level: 75 },
+      { name: 'Git', level: 90 },
+      { name: 'GitHub', level: 90 },
+      { name: 'VS Code', level: 100 },
+      { name: 'Figma', level: 95 },
     ],
   },
   {
     category: 'Architecture',
     items: [
       { name: 'Component Architecture', level: 80 },
-      { name: 'API Integration', level: 80 },
+      { name: 'API Integration', level: 95 },
     ],
   },
 ];
@@ -112,11 +105,11 @@ export const projects = [
     repo: 'https://github.com/JahanzaibJameel/frontend-nexus',
     tech: ['HTML', 'CSS', 'JavaScript', 'PWA', 'Browser APIs'],
     metrics: [
-      { value: '48', label: 'Libraries/Areas' },
+      { value: '47', label: 'Libraries/Areas' },
       { value: '28', label: 'Pages' },
       { value: '27', label: 'Browser APIs' },
     ],
-    period: '2024 - Present',
+    period: '2026 - Present',
     role: 'Frontend Engineer',
   },
   {
@@ -134,7 +127,7 @@ export const projects = [
       { value: '~220', label: 'Tests' },
       { value: '[NEED USER INPUT]', label: 'Users' },
     ],
-    period: '2024 - Present',
+    period: '2026 - Present',
     role: 'Frontend Engineer',
   },
   {
@@ -152,7 +145,7 @@ export const projects = [
       { value: '10', label: 'Screens' },
       { value: 'Expo SDK 54', label: 'Version' },
     ],
-    period: '2024 - Present',
+    period: '2026 - Present',
     role: 'Frontend Engineer',
   },
   {
@@ -169,7 +162,7 @@ export const projects = [
     metrics: [
       { value: '[NEED USER INPUT]', label: 'Features' },
     ],
-    period: '2024 - Present',
+    period: '2026 - Present',
     role: 'Frontend Engineer',
   },
   {
