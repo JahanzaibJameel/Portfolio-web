@@ -40,10 +40,9 @@ export const aboutData = {
     "I'm a Frontend Engineer with production experience in React, Next.js, and React Native. I enjoy building real products, reusable UI systems, API integrations, and modern development workflows. I'm currently continuing my academic journey while building production-oriented applications.",
   timeline: [
     { year: '2024', event: 'Started as Frontend Engineer at Apprex Systems' },
-    { year: '2025', event: 'Continuing to build production-focused applications' },
   ],
   stats: {
-    projects: '15+',   
+    projects: '5+',   
     years: '2+',
   },
 };
@@ -79,7 +78,7 @@ export const skills = [
     items: [
       { name: 'Git', level: 90 },
       { name: 'GitHub', level: 90 },
-      { name: 'VS Code', level: 100 },
+      { name: 'VS Code', level: 90 },
       { name: 'Figma', level: 95 },
     ],
   },
@@ -123,10 +122,7 @@ export const projects = [
     demo: 'https://cryptovault-pro12.netlify.app/',
     repo: 'https://github.com/JahanzaibJameel/CryptoVault-Pro',
     tech: ['Angular 21', 'TypeScript 5.9', 'RxJS', 'SCSS', 'PWA', 'IndexedDB'],
-    metrics: [
-      { value: '~220', label: 'Tests' },
-      { value: '[NEED USER INPUT]', label: 'Users' },
-    ],
+ 
     period: '2026 - Present',
     role: 'Frontend Engineer',
   },
@@ -136,7 +132,7 @@ export const projects = [
     description:
       'A cross-platform mobile photo gallery application built with React Native and Expo, focusing on reusable UI, navigation, local persistence, and performance.',
     longDescription:
-      'A React Native photo gallery app using Expo, TypeScript, MMKV for local storage, FlashList for performance, and React Navigation for routing. Features approximately 10 screens.',
+      'A React Native photo gallery app using Expo, TypeScript, MMKV for local storage, FlashList for performance, and React Navigation for routing.',
     image: '/project-3.png',
     demo: 'https://lumora-photogallery-app.netlify.app/',
     repo: 'https://github.com/JahanzaibJameel/Lumora-photogallery-App',
@@ -162,21 +158,7 @@ export const projects = [
     period: '2026 - Present',
     role: 'Frontend Engineer',
   },
-  {
-    title: 'Disaster Alert / SOS',
-    slug: 'disaster-alert',
-    description:
-      'A disaster alert and emergency information web application focused on presenting location-aware alerts and emergency information through a modern web interface.',
-    longDescription:
-      'A Next.js application using TypeScript, Tailwind CSS, and MapLibre for location-aware disaster alerts and emergency information display.',
-    image: '/project-5.png',
-    demo: '[NEED USER INPUT]',
-    repo: '[NEED USER INPUT]',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MapLibre', 'API Integration'],
-    metrics: [],
-    period: 'In Progress',
-    role: 'Frontend Engineer',
-  },
+
 ];
 
 export const experience = [
@@ -201,7 +183,7 @@ export const education = [
   {
     institution: 'Eagle House Higher Secondary School',
     degree: 'Class 12 (Science / Pre-Engineering)',
-    period: '2024 - present',
+    period: '2024 – Present',
     location: 'Hyderabad, Sindh, Pakistan',
   },
 ];
