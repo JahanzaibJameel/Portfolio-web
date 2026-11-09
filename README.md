@@ -1,212 +1,88 @@
 # Muhammad Jahanzaib — Portfolio
 
-<p align="center">
-  <img src="public/logo.svg" alt="Logo" width="64" />
-</p>
+An editorial, single-page portfolio for frontend engineer Muhammad Jahanzaib. The
+site combines project case studies and professional information with scroll-driven
+motion and a WebGL hero scene.
 
-<p align="center">
-  A premium, production-grade developer portfolio built with the modern web stack —
-  <strong>Next.js 16 (App Router)</strong>, <strong>React 19</strong>, <strong>TypeScript</strong>, and
-  <strong>Tailwind CSS v4</strong>.
-</p>
+## Highlights
 
-<p align="center">
-  <a href="https://jahanzaib.dev"><img src="https://img.shields.io/badge/Preview-jahanzaib.dev-blue?style=for-the-badge" alt="Live Preview" /></a>
-  <a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs" alt="Next.js" /></a>
-  <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.7-3178c6?style=for-the-badge&logo=typescript" alt="TypeScript" /></a>
-  <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" /></a>
-</p>
+- Responsive portfolio sections for about, narrative, philosophy, skills,
+  experience, projects, education, and contact.
+- Interactive 3D hero built with React Three Fiber, Drei, and Three.js.
+- Framer Motion effects, Lenis smooth scrolling, and a scroll progress indicator.
+- Searchable command palette (`Ctrl+K` / `⌘K`) for home, projects, and resume.
+- Reduced-motion preference support for the cursor, smooth-scroll setup, and 3D
+  motion.
+- Lazy-loaded WebGL scene that pauses offscreen and caps render resolution.
+- Canonical, Open Graph, Twitter, Person structured data, sitemap, and robots
+  metadata.
+- A compact 64px favicon instead of a 1024px image mislabeled as an ICO.
 
----
+## Technology
 
-## Overview
+- Next.js 16 App Router, React 19, and TypeScript
+- Tailwind CSS 4
+- Framer Motion and Lenis
+- React Three Fiber, Drei, and Three.js
+- cmdk and Lucide icons
 
-A sleek, dark-themed, glassmorphism personal site that showcases the work of a
-**Senior Frontend Engineer** — including projects, experience, skills, achievements,
-testimonials, and open-source contributions. Designed with motion-first interactions,
-accessibility, and performance at its core, it ships as a fully static, SEO-optimized
-Next.js application.
+Fonts are loaded with `next/font/google`: Inter and Inter Tight.
 
----
+## Requirements
 
-## Features
+- Node.js `>=20.18.0` (see `package.json`)
+- npm
 
-| Experience | What it does |
-| --- | --- |
-| **Glassmorphism UI** | Frosted-glass surfaces with subtle borders, backdrop blur, and gradient accents. |
-| **Smooth Scrolling** | Native-feeling momentum scrolling powered by [`lenis`](https://github.com/darkroomengineering/lenis). |
-| **Custom Cursor** | Spring-physics cursor with a glowing aura (auto-disabled on touch / small screens). |
-| **Scroll Progress Bar** | Gradient progress indicator driven by Framer Motion's `useScroll`. |
-| **Floating Navigation** | Appears on scroll; quick anchor links to every section. |
-| **Command Palette** | `⌘K` / `Ctrl+K` quick-navigation and "Download CV" action via [`cmdk`](https://github.com/pacocoursey/cmdk). |
-| **Magnetic Buttons** | Pointer-tracking interactive buttons with hover gradients. |
-| **Scroll Reveal Animations** | Staggered, viewport-triggered entrance animations using Framer Motion. |
-| **Responsive Layout** | Mobile-first design that adapts across all breakpoints. |
-| **Reduced Motion Support** | Honors `prefers-reduced-motion` for accessible motion. |
-| **Loading & Error States** | Animated `loading.tsx` and graceful `error.tsx` boundaries. |
-| **SEO & Social Cards** | Full Open Graph, Twitter, and canonical metadata with `metadataBase`. |
+## Start locally
 
-### Sections
+```bash
+npm install
+npm run dev
+```
 
-`Hero` · `About` · `Skills` · `Projects` · `Experience` · `Testimonials` ·
-`Open Source` · `Achievements` · Awards timeline · `Contact` · `Footer`
+Open [http://localhost:3000](http://localhost:3000).
 
----
+## Checks and production
 
-## Tech Stack
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+npm run start
+```
 
-| Technology | Version | Role |
-| --- | --- | --- |
-| [Next.js](https://nextjs.org) | 16 | React framework (App Router, Turbopack) |
-| [React](https://react.dev) | 19 | UI library |
-| [TypeScript](https://www.typescriptlang.org) | 5.7 | Type safety |
-| [Tailwind CSS](https://tailwindcss.com) | 4 | Utility-first styling (CSS-first config) |
-| [Framer Motion](https://www.framer.com/motion/) | 12 | Animation & gestures |
-| [Lenis](https://github.com/darkroomengineering/lenis) | 1.x | Smooth scrolling |
-| [cmdk](https://github.com/pacocoursey/cmdk) | 1.x | Command palette |
-| [lucide-react](https://lucide.dev) | latest | Icon system |
-| [clsx](https://github.com/lukeed/clsx) | 2.x | Conditional class composition |
-| [ESLint](https://eslint.org) | 9 | Code quality (Next.js core-web-vitals) |
+Run `npm run build` before `npm run start`. The repository does not currently
+define a unit-test script.
 
-### Fonts
+## Documentation
 
-- **Inter** — body text
-- **Inter Tight** — display headings
-- **JetBrains Mono** — code / mono accents
+- [Architecture and runtime behavior](docs/architecture.md)
+- [Content and site configuration](docs/content-and-customization.md)
+- [Development, validation, and deployment](docs/development-and-deployment.md)
 
----
-
-## Project Structure
+## Repository map
 
 ```text
-portfolio-web/
-├── app/                      # Next.js App Router
-│   ├── layout.tsx            # Root layout, fonts, SEO metadata
-│   ├── page.tsx              # Composes all sections & global effects
-│   ├── globals.css           # Tailwind v4 import + base styles + utilities
-│   ├── theme.css             # Tailwind theme tokens
-│   ├── loading.tsx           # Suspense fallback
-│   └── error.tsx             # Error boundary UI
-├── components/
-│   ├── effects/              # CustomCursor, ScrollProgress
-│   ├── layout/               # FloatingNav, SmoothScroll, Footer
-│   ├── sections/             # Hero, About, Skills, Projects, Experience,
-│   │                         #   Testimonials, OpenSource, Achievements, Contact
-│   └── ui/                   # CommandPalette, GlassCard,
-│                             #   MagneticButton, SectionHeading
-├── hooks/
-│   └── use-reduced-motion.ts # Accessible motion preference hook
-├── lib/
-│   ├── data.ts               # Site content & static data
-│   ├── user-data.ts          # User profile constants
-│   └── utils.ts              # cn(), date/format, debounce, animation presets
-├── public/                   # Static assets (logo, CV, images, favicon)
-├── tailwind.config.ts        # Theme extension (colors, fonts, animations)
-├── next.config.mjs           # Next.js config (images, compression)
-├── postcss.config.js         # Tailwind v4 PostCSS plugin
-├── tsconfig.json             # TypeScript config (@/* path alias)
-└── eslint.config.js          # ESLint flat config
+app/                    App Router layout, page, global styles, loading/error UI
+components/effects/     Cursor and scroll-progress effects
+components/layout/      Floating navigation, Lenis wrapper, footer
+components/sections/    Page sections and their presentation
+components/three/       React Three Fiber hero scene
+components/ui/          Command palette and section heading
+hooks/                  Reduced-motion preference hook
+lib/data.ts             Portfolio content, links, and navigation
+lib/utils.ts            Shared class-name helper
+public/                 Resume, logo, icons, and social preview image
+docs/                   Project documentation
 ```
 
----
+## Contact behavior
 
-## Getting Started
-
-### Prerequisites
-
-- **Node.js** `>= 20.18.0`
-- **npm** `>= 10` (or pnpm / yarn)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/JahanzaibJameel/Portfolio-web.git
-cd Portfolio-web
-
-# Install dependencies
-npm install
-```
-
-### Development
-
-```bash
-npm run dev      # Start the dev server (http://localhost:3000)
-```
-
-### Build & Preview
-
-```bash
-npm run build    # Create an optimized production build
-npm run start    # Serve the production build
-npm run lint     # Run ESLint
-npm run analyze  # Build with bundle analysis (ANALYZE=true)
-```
-
----
-
-## Deployment
-
-The app is a static-friendly Next.js project. Deploy with any of:
-
-- **[Vercel](https://vercel.com)** — zero-config, recommended for Next.js
-- **[Netlify](https://www.netlify.com)**
-- **[Cloudflare Pages](https://pages.cloudflare.com)**
-- **[AWS Amplify](https://aws.amazon.com/amplify/)**
-
-> Tip: Set the production environment variable / domain so `metadataBase` and
-> Open Graph images resolve correctly.
-
----
-
-## Customization
-
-All content lives in **`lib/data.ts`** and **`lib/user-data.ts`**. Edit these
-files to make the portfolio your own:
-
-- **Profile & hero** — `USER_INFO`, `PERSONAL_INFO`, `heroData`
-- **Projects** — `projects[]` (title, description, tech, demo/repo links, metrics)
-- **Experience** — `experience[]`
-- **Skills** — `skills[]` (grouped by category with proficiency levels)
-- **Testimonials** — `testimonials[]`
-- **Open source** — `openSource[]`
-- **Achievements** — `achievements[]`
-- **Navigation** — `navItems[]`
-
-### Theming
-
-- Global theme tokens & fonts: `app/globals.css`, `app/theme.css`
-- Brand colors, font families, and animations: `tailwind.config.ts`
-- Gradient accents: search for `from-blue-500 to-purple-600` and the
-  `.gradient-text` utility in `app/globals.css`
-
-### Contact Form
-
-The contact form in `components/sections/contact.tsx` is a client-side UI demo
-with success-state handling. Wire it to your backend (e.g. Formspree, Resend, or
-an API route) by replacing the `handleSubmit` logic with a `fetch` call.
-
----
-
-## Accessibility & Performance
-
-- Semantic HTML, ARIA labels, and visible focus states
-- `prefers-reduced-motion` respected via `useReducedMotion`
-- Optimized web fonts (`display: swap`), glass effects with GPU-friendly blur
-- Compression enabled (`compress: true`), `poweredByHeader` disabled
-- SEO metadata, canonical URLs, and social share cards out of the box
-
----
+The contact form opens the visitor's default email application with the name,
+email address, and message prefilled. It does not submit to a server. To collect
+messages directly, connect the form to a trusted form provider or an API route
+and update the behavior described in [the contact section](docs/content-and-customization.md#contact-form).
 
 ## License
 
-Released under the [MIT License](LICENSE).
-
----
-
-## Contact
-
-- **Email:** [m.jahanzaibjameel@gmail.com](mailto:m.jahanzaibjameel@gmail.com)
-- **GitHub:** [@JahanzaibJameel](https://github.com/JahanzaibJameel)
-- **LinkedIn:** [in/jahanzaib](https://linkedin.com/in/jahanzaib)
+See [LICENSE](LICENSE).
