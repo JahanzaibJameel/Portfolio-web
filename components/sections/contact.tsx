@@ -1,54 +1,63 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Send } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/data';
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get('name') ?? '');
+    const email = String(formData.get('email') ?? '');
+    const message = String(formData.get('message') ?? '');
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+    window.location.href = `mailto:${SITE_CONFIG.email}?subject=${subject}&body=${body}`;
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="glass border border-white/10 rounded-2xl p-8 lg:p-12">
+    <section id="contact" className="py-24 px-4">
+      <div className="mx-auto max-w-7xl">
+        <div className="editorial-card rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.12),transparent_35%),rgba(15,23,42,0.8)] p-6 md:p-10 lg:p-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5 }}
+            className="mb-8 max-w-2xl"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
-            <p className="text-gray-400 mb-8 max-w-2xl">
-              I&apos;m always interested in new opportunities and collaborations. Let&apos;s chat about how I can help bring your ideas to life.
-            </p>
+            <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Contact</p>
+            <h2 className="mt-3 text-3xl font-semibold text-white md:text-5xl">Let&apos;s build something with intent.</h2>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5 }}
-              className="space-y-6"
+              className="space-y-5"
             >
-              <div className="flex items-center gap-4">
-                <Mail className="w-5 h-5 text-gray-400" />
-                <a href="mailto:m.jahanzaibjameel@gmail.com" className="text-gray-400 hover:text-white transition-colors">
-                  m.jahanzaibjameel@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-gray-400" />
-                <span>+92 308 3954920</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <MapPin className="w-5 h-5 text-gray-400" />
-                <span>Hyderabad, Sindh, Pakistan</span>
+              <a href={`mailto:${SITE_CONFIG.email}`} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-slate-200 transition-colors hover:border-cyan-400/40">
+                <Mail className="h-5 w-5 text-cyan-300" />
+                <span>{SITE_CONFIG.email}</span>
+              </a>
+
+              <a href={SITE_CONFIG.github} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-slate-200 transition-colors hover:border-cyan-400/40">
+                <Github className="h-5 w-5 text-cyan-300" />
+                <span>GitHub</span>
+              </a>
+
+              <a href={SITE_CONFIG.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-slate-200 transition-colors hover:border-cyan-400/40">
+                <Linkedin className="h-5 w-5 text-cyan-300" />
+                <span>LinkedIn</span>
+              </a>
+
+              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-slate-200">
+                <MapPin className="h-5 w-5 text-cyan-300" />
+                <span>{SITE_CONFIG.location}</span>
               </div>
             </motion.div>
 
@@ -58,44 +67,15 @@ export default function Contact() {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5 }}
               onSubmit={handleSubmit}
-              className="space-y-4"
+              className="space-y-4 rounded-[1.75rem] border border-white/10 bg-slate-950/60 p-5"
             >
-              {submitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-8"
-                >
-                  <p className="text-green-400 font-medium">Thank you! Your message has been sent.</p>
-                </motion.div>
-              ) : (
-                <>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                    className="w-full rounded-full bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    required
-                    className="w-full rounded-full bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-                  />
-                  <textarea
-                    placeholder="Your Message"
-                    rows={4}
-                    required
-                    className="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 resize-none"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full rounded-full bg-gradient-to-r from-blue-500 to-purple-600 py-3 font-medium text-white hover:scale-105 transition-transform"
-                  >
-                    Send Message
-                  </button>
-                </>
-              )}
+              <input name="name" type="text" aria-label="Your name" placeholder="Your name" required className="w-full rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-slate-400 outline-none transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20" />
+              <input name="email" type="email" aria-label="Your email" placeholder="Your email" required className="w-full rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-slate-400 outline-none transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20" />
+              <textarea name="message" rows={5} aria-label="Tell me about your project" placeholder="Tell me about your project" required className="w-full resize-none rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-slate-400 outline-none transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20" />
+              <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#38bdf8_0%,#8b5cf6_50%,#f472b6_100%)] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">
+                Open email app
+                <Send size={15} />
+              </button>
             </motion.form>
           </div>
         </div>
