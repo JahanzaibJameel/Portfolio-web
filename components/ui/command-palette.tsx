@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Command } from 'cmdk';
 import { Search, Download } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/data';
 
 export default function CommandPalette() {
   const [open, setOpen] = useState(false);
@@ -36,56 +37,60 @@ export default function CommandPalette() {
               exit={{ scale: 0.9, opacity: 0 }}
               className="relative w-full max-w-md mx-4 rounded-2xl bg-gray-950/50 backdrop-blur-xl border border-white/10 p-6 shadow-xl"
               onClick={(e) => e.stopPropagation()}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') setOpen(false);
+              }}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Portfolio quick actions"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <Search className="w-5 h-5 text-gray-400" />
-                <span className="text-lg font-semibold">Quick Actions</span>
-              </div>
-              <Command.List>
-                <Command.Item
-                  className="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-white/10 cursor-pointer"
-                  onKeyDown={(e: React.KeyboardEvent) => {
-                    if (e.key === 'Enter') {
-                      window.location.hash = '#home';
+              <Command label="Portfolio quick actions" loop>
+                <div className="mb-4 flex items-center gap-3">
+                  <Search className="w-5 h-5 text-gray-400" />
+                  <Command.Input
+                    autoFocus
+                    aria-label="Search quick actions"
+                    placeholder="Search quick actions..."
+                    className="min-w-0 flex-1 bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
+                  />
+                </div>
+                <Command.List className="space-y-1">
+                  <Command.Empty className="py-4 text-center text-sm text-gray-500">
+                    No matching actions.
+                  </Command.Empty>
+                  <Command.Item
+                    value="Go to home"
+                    className="group flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm data-[selected]:bg-white/10"
+                    onSelect={() => {
+                      window.location.hash = '#hero';
                       setOpen(false);
-                    }
-                  }}
-                >
-                  <span className="sr-only">Go to Home</span>
-                  <span className="flex-1">Go to Home</span>
-                  <kbd className="pointer-events-none inline-flex h-5 items-center gap-1 rounded border border-gray-700 bg-gray-800 px-2 text-xs text-gray-400">
-                    <span className="text-white">⌘</span>H
-                  </kbd>
-                </Command.Item>
-                <Command.Item
-                  className="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-white/10 cursor-pointer"
-                  onKeyDown={(e: React.KeyboardEvent) => {
-                    if (e.key === 'Enter') {
+                    }}
+                  >
+                    <span className="flex-1">Go to Home</span>
+                  </Command.Item>
+                  <Command.Item
+                    value="View projects"
+                    className="group flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm data-[selected]:bg-white/10"
+                    onSelect={() => {
                       window.location.hash = '#projects';
                       setOpen(false);
-                    }
-                  }}
-                >
-                  <span className="sr-only">View Projects</span>
-                  <span className="flex-1">View Projects</span>
-                  <kbd className="pointer-events-none inline-flex h-5 items-center gap-1 rounded border border-gray-700 bg-gray-800 px-2 text-xs text-gray-400">
-                    <span className="text-white">⌘</span>P
-                  </kbd>
-                </Command.Item>
-                <Command.Item
-                  className="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-white/10 cursor-pointer"
-                  onSelect={() => {
-                    window.open('/cv.pdf', '_blank');
-                    setOpen(false);
-                  }}
-                >
-                  <Download className="w-4 h-4 text-gray-400" />
-                  <span className="flex-1">Download CV</span>
-                  <kbd className="pointer-events-none inline-flex h-5 items-center gap-1 rounded border border-gray-700 bg-gray-800 px-2 text-xs text-gray-400">
-                    <span className="text-white">⌘</span>D
-                  </kbd>
-                </Command.Item>
-              </Command.List>
+                    }}
+                  >
+                    <span className="flex-1">View Projects</span>
+                  </Command.Item>
+                  <Command.Item
+                    value="Open resume"
+                    className="group flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm data-[selected]:bg-white/10"
+                    onSelect={() => {
+                      window.open(SITE_CONFIG.resume, '_blank', 'noopener,noreferrer');
+                      setOpen(false);
+                    }}
+                  >
+                    <Download className="w-4 h-4 text-gray-400" />
+                    <span className="flex-1">Open resume</span>
+                  </Command.Item>
+                </Command.List>
+              </Command>
             </motion.div>
           </motion.div>
         )}
