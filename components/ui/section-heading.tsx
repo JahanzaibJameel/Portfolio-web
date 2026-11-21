@@ -31,15 +31,20 @@ export default function SectionHeading({
       className={cn('mb-12', alignClasses[align], className)}
     >
       {subtitle && (
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
-          className="text-sm uppercase tracking-wider text-gray-500 mb-4"
+          className={cn(
+            'mb-4 flex items-center gap-3 text-sm uppercase tracking-[0.28em] text-slate-400',
+            align === 'center' ? 'justify-center' : align === 'right' ? 'justify-end' : 'justify-start',
+          )}
         >
-          {subtitle}
-        </motion.p>
+          <span className="h-px w-10 bg-gradient-to-r from-transparent via-cyan-400/80 to-transparent" />
+          <span>{subtitle}</span>
+          <span className="h-px w-10 bg-gradient-to-r from-transparent via-violet-400/80 to-transparent" />
+        </motion.div>
       )}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -47,7 +52,7 @@ export default function SectionHeading({
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.4, delay: 0.2, ease: 'easeOut' }}
         className={cn(
-          'text-3xl md:text-4xl lg:text-5xl font-bold leading-tight',
+          'font-display text-[clamp(2.5rem,5vw,5.2rem)] font-semibold leading-[0.9] tracking-[-0.06em] text-white',
           align === 'center' ? 'mx-auto max-w-3xl' : '',
         )}
       >
