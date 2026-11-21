@@ -1,5 +1,7 @@
-import { Inter, Inter_Tight, JetBrains_Mono } from 'next/font/google';
+import type { Metadata } from 'next';
+import { Inter, Inter_Tight } from 'next/font/google';
 import './globals.css';
+import { SITE_CONFIG } from '@/lib/data';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,36 +15,30 @@ const interTight = Inter_Tight({
   display: 'swap',
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
-  display: 'swap',
-});
-
-export const metadata = {
-  title: 'Muhammad Jahanzaib — Frontend Engineer',
-  description:
-    'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
+export const metadata: Metadata = {
+  title: SITE_CONFIG.title,
+  description: SITE_CONFIG.description,
   keywords: ['frontend', 'engineer', 'react', 'next.js', 'react-native', 'typescript', 'portfolio'],
-  authors: [{ name: 'Muhammad Jahanzaib' }],
-  creator: 'Muhammad Jahanzaib',
-  publisher: 'Muhammad Jahanzaib',
+  applicationName: `${SITE_CONFIG.name} Portfolio`,
+  authors: [{ name: SITE_CONFIG.name }],
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
   formatDetection: {
-    phoneNumbers: false,
+    telephone: false,
     email: false,
     address: false,
-    images: false,
+    date: false,
+    url: false,
   },
-  metadataBase: new URL('https://muhammadjahanzaib.dev'),
+  metadataBase: new URL(SITE_CONFIG.url),
   alternates: {
-    canonical: 'https://muhammadjahanzaib.dev',
+    canonical: '/',
   },
   openGraph: {
-    title: 'Muhammad Jahanzaib — Frontend Engineer',
-    description:
-      'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
-    url: 'https://muhammadjahanzaib.dev',
-    siteName: 'Muhammad Jahanzaib Portfolio',
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+    url: SITE_CONFIG.url,
+    siteName: `${SITE_CONFIG.name} Portfolio`,
     images: [
       {
         url: '/og-image.png',
@@ -56,31 +52,29 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Muhammad Jahanzaib — Frontend Engineer',
-    description:
-      'Frontend Engineer building fast, scalable, and maintainable web and mobile experiences with React, Next.js, React Native, and TypeScript.',
-    creators: ['@JahanzaibJameel'],
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+    images: ['/og-image.png'],
     creator: '@JahanzaibJameel',
   },
   robots: {
     index: true,
     follow: true,
-    maxImagePreview: 'large',
-    maxSnippet: -1,
-    maxVideoPreview: -1,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
   },
   category: 'technology',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
     apple: '/apple-touch-icon.png',
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${interTight.variable} ${jetbrainsMono.variable} scroll-smooth`}>
-      <head />
+    <html lang="en" className={`${inter.variable} ${interTight.variable} scroll-smooth`}>
       <body className="min-h-screen font-body antialiased bg-[#09090B] text-[#FAFAFA]">
         {children}
       </body>
