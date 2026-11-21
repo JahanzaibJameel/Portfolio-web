@@ -24,14 +24,14 @@ export default function FloatingNav() {
           animate={{ opacity: 1, y: 0, x: '-50%' }}
           exit={{ opacity: 0, y: -20, x: '-50%' }}
           transition={{ duration: 0.3 }}
-          className="fixed top-6 left-1/2 z-40 max-w-[90vw]"
+          className="fixed left-1/2 top-6 z-40 max-w-[90vw]"
         >
-          <nav className="flex items-center gap-1 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 glass rounded-full border border-white/10 shadow-2xl backdrop-blur-xl overflow-x-auto">
+          <nav className="glass flex items-center gap-1 overflow-x-auto rounded-full border border-white/10 px-3 py-2 shadow-[0_16px_45px_rgba(15,23,42,0.45)] backdrop-blur-xl sm:gap-2 sm:px-4 sm:py-2.5">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-xs sm:text-sm text-gray-300 hover:text-white px-2.5 py-1 rounded-full hover:bg-white/10 transition-all whitespace-nowrap"
+                className="whitespace-nowrap rounded-full px-2.5 py-1 text-xs text-slate-300 transition-all duration-300 hover:bg-white/8 hover:text-white sm:text-sm"
               >
                 {item.label}
               </a>
