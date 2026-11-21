@@ -8,6 +8,7 @@ const emptySubscribe = () => () => {};
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const outerRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 500, damping: 30 });
@@ -31,14 +32,16 @@ export default function CustomCursor() {
     const handlePointerOver = (event: Event) => {
       const target = event.target as HTMLElement | null;
       if (target?.closest('a, button, [role="button"], .magnetic-button')) {
-        cursorRef.current?.style.setProperty('scale', '2');
+        cursorRef.current?.style.setProperty('transform', 'translate(-50%, -50%) scale(1.8)');
+        outerRef.current?.style.setProperty('transform', 'translate(-50%, -50%) scale(1.2)');
       }
     };
 
     const handlePointerOut = (event: Event) => {
       const target = event.target as HTMLElement | null;
       if (target?.closest('a, button, [role="button"], .magnetic-button')) {
-        cursorRef.current?.style.setProperty('scale', '1');
+        cursorRef.current?.style.setProperty('transform', 'translate(-50%, -50%) scale(1)');
+        outerRef.current?.style.setProperty('transform', 'translate(-50%, -50%) scale(1)');
       }
     };
 
@@ -60,13 +63,14 @@ export default function CustomCursor() {
   return (
     <>
       <motion.div
-        ref={cursorRef}
-        style={{ x: springX, y: springY, scale: 1 }}
-        className="pointer-events-none fixed top-0 left-0 w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white mix-blend-difference z-50 transition-transform duration-150 hidden md:block"
+        ref={outerRef}
+        style={{ x: springX, y: springY }}
+        className="pointer-events-none fixed left-0 top-0 z-40 hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-300/60 bg-cyan-400/10 blur-[1px] md:block"
       />
       <motion.div
+        ref={cursorRef}
         style={{ x: springX, y: springY }}
-        className="pointer-events-none fixed top-0 left-0 w-40 h-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-2xl z-40 hidden md:block"
+        className="pointer-events-none fixed left-0 top-0 z-50 hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_18px_rgba(255,255,255,0.9)] md:block"
       />
     </>
   );
