@@ -6,41 +6,29 @@ import SectionHeading from '@/components/ui/section-heading';
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeading
-          title="Skills & Expertise"
-          subtitle="Technical Stack"
-          align="left"
-        />
+    <section id="skills" className="py-24 px-4">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading title="The tools behind the craft." subtitle="Skillset" align="left" />
 
-        <div className="space-y-12">
-          {skills.map((category, i) => (
+        <div className="space-y-8">
+          {skills.map((category, index) => (
             <motion.div
               key={category.category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="editorial-card rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-6 md:p-8"
             >
-              <h3 className="text-xl font-semibold mb-6 text-gray-300">{category.category}</h3>
-              <div className="grid md:grid-cols-5 gap-4">
+              <h3 className="mb-5 text-sm font-medium uppercase tracking-[0.22em] text-slate-400">{category.category}</h3>
+              <div className="flex flex-wrap gap-3">
                 {category.items.map((item) => (
-                  <div key={item.name} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300">{item.name}</span>
-                      <span className="text-sm text-gray-500">{item.level}%</span>
-                    </div>
-                    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${item.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
-                      />
-                    </div>
-                  </div>
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 bg-gradient-to-r from-white/6 to-white/[0.02] px-3.5 py-2 text-sm text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+                  >
+                    {item}
+                  </span>
                 ))}
               </div>
             </motion.div>
